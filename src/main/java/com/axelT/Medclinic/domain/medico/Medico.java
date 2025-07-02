@@ -7,7 +7,7 @@ import lombok.*;
 @Table(name="medicos")
 @Entity(name="Medico")
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Medico {
@@ -24,8 +24,7 @@ public class Medico {
     @Embedded
     private DatosDireccion direccion;
 
-    public Medico() {
-    }
+  //
 
     public Medico(DatosRegistroMedico datosRegistroMedico) {
         this.activo = true;

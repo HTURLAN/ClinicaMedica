@@ -6,11 +6,12 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Table(name="pacientes")
 @Entity(name="Paciente")
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Paciente {
@@ -27,8 +28,7 @@ public class Paciente {
     @Embedded
     private DatosDireccion direccion;
 
-    public Paciente() {
-    }
+   //
 
     public Paciente(DatosRegistroPaciente datosRegistroPaciente) {
         this.activo = true;
